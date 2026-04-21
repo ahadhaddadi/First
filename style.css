@@ -1,0 +1,428 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #dfeee6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.phone {
+  width: 100%;
+  max-width: 390px;
+  height: 780px;
+  background: #fdfdfd;
+  border-radius: 32px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top bar */
+
+.top-bar {
+  height: 60px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e3ece6;
+  background: #f8fbf9;
+}
+
+.app-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-top {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.app-title-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.app-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #123a5a;
+}
+
+.app-name-ar {
+  font-size: 0.75rem;
+  color: #1f7a4d;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 4px;
+}
+
+.lang-btn {
+  border-radius: 999px;
+  border: 1px solid transparent;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  background: transparent;
+  cursor: pointer;
+  color: #4a5b52;
+}
+
+.lang-btn.active {
+  background: #1f7a4d;
+  color: #fff;
+}
+
+/* Screens */
+
+.screens {
+  flex: 1;
+  padding: 16px 16px 64px;
+  position: relative;
+}
+
+.screen {
+  position: absolute;
+  inset: 16px 16px 64px;
+  background: transparent;
+  display: none;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* Start screens */
+
+.start-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  z-index: -1;
+}
+
+.start-bg-1 {
+  background: radial-gradient(circle at top, #3bbf7a, #1f7a4d);
+}
+
+.start-bg-2 {
+  background: linear-gradient(135deg, #1f7a4d, #0f3f29);
+}
+
+.start-bg-3 {
+  background: linear-gradient(135deg, #1f7a4d, #3bbf7a);
+}
+
+.start-content {
+  color: #fff;
+  padding: 32px 20px;
+}
+
+.logo-hero {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.logo-hero-img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  animation: logoBounce 1.2s ease-out;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.logo-text {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.logo-sub {
+  margin-top: 4px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.verse {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.center {
+  text-align: center;
+  color: #fff;
+  margin-top: 80px;
+}
+
+.center h2 {
+  margin-bottom: 8px;
+}
+
+/* Login screens */
+
+.screen-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.logo-login {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.logo-login-small {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.sub {
+  font-size: 0.85rem;
+  color: #6b7a72;
+}
+
+.section-title {
+  margin: 8px 0 12px;
+  font-size: 0.95rem;
+  color: #123a5a;
+}
+
+/* Back button */
+
+.back-btn {
+  border: none;
+  background: transparent;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #123a5a;
+  margin-bottom: 8px;
+}
+
+/* Forms & content */
+
+h2 {
+  margin-top: 0;
+}
+
+.field {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  color: #3b4a42;
+}
+
+.field input {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 4px;
+  border-radius: 12px;
+  border: 1px solid #d0d7d3;
+  font-size: 0.9rem;
+}
+
+input:focus {
+  outline: 2px solid #1f7a4d33;
+}
+
+.code-input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid #d0d7d3;
+  font-size: 1.1rem;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+/* Buttons */
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.btn.full {
+  width: 100%;
+}
+
+.btn.primary {
+  background: #1f7a4d;
+  color: #fff;
+}
+
+.btn.secondary {
+  background: #fff;
+  color: #1f7a4d;
+  border: 1px solid #1f7a4d;
+}
+
+.btn.danger {
+  background: #c0392b;
+  color: #fff;
+}
+
+/* Home */
+
+.hero-card {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #1f7a4d, #3bbf7a);
+  color: #fff;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.hero-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: radial-gradient(circle at top, #ffffffaa, #1f7a4d);
+}
+
+/* Donate / Request banners */
+
+.banner-img {
+  width: 100%;
+  height: 120px;
+  border-radius: 18px;
+  margin-bottom: 12px;
+  background-size: cover;
+  background-position: center;
+}
+
+.donate-banner {
+  background: linear-gradient(135deg, #3bbf7a, #1f7a4d);
+}
+
+.request-banner {
+  background: linear-gradient(135deg, #123a5a, #1f7a4d);
+}
+
+/* Lists */
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  background: #fff;
+  border-radius: 14px;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #e0e5e1;
+  font-size: 0.85rem;
+}
+
+/* Check circle */
+
+.check-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 3px solid #1f7a4d;
+  color: #1f7a4d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 40px auto 12px;
+}
+
+/* Bottom nav */
+
+.bottom-nav {
+  height: 56px;
+  border-top: 1px solid #e3ece6;
+  background: #f8fbf9;
+  display: flex;
+}
+
+.bottom-nav button {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: #4a5b52;
+}
+
+/* Animations */
+
+.fade-in {
+  animation-name: fadeIn;
+}
+
+.slide-up {
+  animation-name: slideUp;
+}
+
+.slide-left {
+  animation-name: slideLeft;
+}
+
+.slide-right {
+  animation-name: slideRight;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes logoBounce {
+  0% { transform: scale(0.6); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* RTL */
+
+.rtl {
+  direction: rtl;
+  text-align: right;
+}

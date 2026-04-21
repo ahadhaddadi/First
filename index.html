@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SOUN – Soun صون</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="phone">
+
+    <!-- Top bar -->
+    <header class="top-bar">
+      <div class="app-title">
+        <img src="logo.png" class="logo-top" alt="Soun logo" />
+        <div class="app-title-text">
+          <span class="app-name">SOUN</span>
+          <span class="app-name-ar">صون</span>
+        </div>
+      </div>
+      <div class="lang-switch">
+        <button id="btn-lang-en" class="lang-btn active">EN</button>
+        <button id="btn-lang-ar" class="lang-btn">AR</button>
+      </div>
+    </header>
+
+    <!-- Screens wrapper -->
+    <section class="screens">
+
+      <!-- Start - 1 -->
+      <section id="screen-start-1" class="screen active">
+        <div class="start-bg start-bg-1"></div>
+        <div class="start-content">
+          <div class="logo-hero">
+            <img src="logo.png" class="logo-hero-img" alt="Soun logo" />
+            <h1 class="logo-text" data-i18n="appName">SOUN</h1>
+            <p class="logo-sub" data-i18n="appTagline">
+              A Platform to Sharing Surplus Food and Reducing Waste
+            </p>
+          </div>
+          <p class="verse" data-i18n="verse">
+            (وكلوا واشربوا ولا تسرفوا)
+          </p>
+        </div>
+      </section>
+
+      <!-- Start - 2 -->
+      <section id="screen-start-2" class="screen">
+        <div class="start-bg start-bg-2"></div>
+        <div class="start-content center">
+          <h2 data-i18n="start2Title">Reduce food waste</h2>
+          <p data-i18n="start2Body">
+            Share what you don’t need with those who do.
+          </p>
+          <p class="verse" data-i18n="verse">
+            (وكلوا واشربوا ولا تسرفوا)
+          </p>
+        </div>
+      </section>
+
+      <!-- Start - 3 -->
+      <section id="screen-start-3" class="screen">
+        <div class="start-bg start-bg-3"></div>
+        <div class="start-content center">
+          <h2 data-i18n="start3Title">Welcome to SOUN</h2>
+          <p data-i18n="start3Body">
+            Where food is shared, not wasted.
+          </p>
+          <button id="btn-start-now" class="btn primary" data-i18n="startNow">
+            Log in
+          </button>
+        </div>
+      </section>
+
+      <!-- Login - 4 -->
+      <section id="screen-login" class="screen">
+        <div class="screen-header">
+          <img src="logo.png" class="logo-login" alt="Soun logo" />
+          <h2 data-i18n="loginTitle">SOUN صون</h2>
+          <p class="sub" data-i18n="loginSub">
+            A Platform to Sharing Surplus Food and Reducing Waste
+          </p>
+        </div>
+        <button id="btn-go-login-num" class="btn primary full" data-i18n="loginBtn">
+          Log in
+        </button>
+      </section>
+
+      <!-- LoginNum - 5 -->
+      <section id="screen-login-num" class="screen">
+        <button class="back-btn" data-back="login">←</button>
+        <div class="screen-header">
+          <img src="logo.png" class="logo-login-small" alt="Soun logo" />
+          <h2 data-i18n="welcomeTitle">Welcome to SOUN</h2>
+          <p class="sub" data-i18n="welcomeBody">
+            Where food is Shared not Wasted
+          </p>
+        </div>
+        <h3 class="section-title" data-i18n="loginSectionTitle">Log in</h3>
+        <label class="field">
+          <span data-i18n="phoneLabel">Enter your mobile number</span>
+          <input type="tel" id="login-phone" placeholder="+9665..." />
+        </label>
+        <button id="btn-send-code" class="btn primary full" data-i18n="sendCode">
+          Send verification code
+        </button>
+      </section>
+
+      <!-- LoginEnterNum - 6 -->
+      <section id="screen-login-enter" class="screen">
+        <button class="back-btn" data-back="login-num">←</button>
+        <div class="screen-header">
+          <img src="logo.png" class="logo-login-small" alt="Soun logo" />
+          <h2 data-i18n="codeTitle">Verification code</h2>
+          <p class="sub" data-i18n="codeBody">
+            Enter the code we sent to your phone.
+          </p>
+        </div>
+        <input type="text" id="login-pin" maxlength="6" class="code-input" placeholder="123456" />
+        <button id="btn-verify-pin" class="btn primary full" data-i18n="continue">
+          Continue
+        </button>
+      </section>
+
+      <!-- Language -->
+      <section id="screen-language" class="screen">
+        <h2 data-i18n="langTitle">Choose language</h2>
+        <button id="btn-lang-screen-en" class="btn primary full" data-i18n="langEn">
+          English
+        </button>
+        <button id="btn-lang-screen-ar" class="btn secondary full" data-i18n="langAr">
+          العربية
+        </button>
+      </section>
+
+      <!-- Home -->
+      <section id="screen-home" class="screen">
+        <div class="hero-card">
+          <div class="hero-img"></div>
+          <div>
+            <h2 data-i18n="homeTitle">Welcome to SOUN</h2>
+            <p id="home-role-label" data-i18n="homeSubtitle">
+              Choose what you want to do today.
+            </p>
+          </div>
+        </div>
+
+        <div class="home-actions">
+          <button id="btn-go-donate" class="btn primary full" data-i18n="donateFood">
+            Donate food
+          </button>
+          <button id="btn-go-request" class="btn secondary full" data-i18n="requestFood">
+            Request food
+          </button>
+        </div>
+      </section>
+
+      <!-- Donate -->
+      <section id="screen-donate" class="screen">
+        <button class="back-btn" data-back="home">←</button>
+        <h2 data-i18n="donateTitle">New donation</h2>
+        <div class="banner-img donate-banner"></div>
+        <form id="form-donate">
+          <label class="field">
+            <span data-i18n="foodType">Food type</span>
+            <input type="text" id="donate-food-type" required />
+          </label>
+          <label class="field">
+            <span data-i18n="quantity">Quantity</span>
+            <input type="number" id="donate-quantity" min="1" required />
+          </label>
+          <label class="field">
+            <span data-i18n="location">Pickup location</span>
+            <input type="text" id="donate-location" required />
+          </label>
+          <label class="field">
+            <span data-i18n="time">Pickup time</span>
+            <input type="datetime-local" id="donate-time" required />
+          </label>
+          <button type="submit" class="btn primary full" data-i18n="submitDonation">
+            Submit donation
+          </button>
+        </form>
+      </section>
+
+      <!-- Confirm donation -->
+      <section id="screen-confirm-donation" class="screen">
+        <div class="center">
+          <div class="check-circle">✓</div>
+          <h2 data-i18n="donationSubmitted">Donation submitted</h2>
+          <p data-i18n="donationThanks">Thank you for your contribution.</p>
+          <button id="btn-back-home-from-confirm" class="btn primary full" data-i18n="backHome">
+            Back to home
+          </button>
+        </div>
+      </section>
+
+      <!-- Request -->
+      <section id="screen-request" class="screen">
+        <button class="back-btn" data-back="home">←</button>
+        <h2 data-i18n="requestTitle">Available donations</h2>
+        <div class="banner-img request-banner"></div>
+        <ul id="donations-list" class="list"></ul>
+        <button id="btn-refresh-donations" class="btn secondary full" data-i18n="refresh">
+          Refresh
+        </button>
+      </section>
+
+      <!-- Confirm request -->
+      <section id="screen-confirm-request" class="screen">
+        <div class="center">
+          <div class="check-circle">✓</div>
+          <h2 data-i18n="requestSubmitted">Request submitted</h2>
+          <p data-i18n="requestInfo">Donor will be notified.</p>
+          <button id="btn-back-home-from-request" class="btn primary full" data-i18n="backHome">
+            Back to home
+          </button>
+        </div>
+      </section>
+
+      <!-- History -->
+      <section id="screen-history" class="screen">
+        <h2 data-i18n="historyTitle">History</h2>
+        <ul id="history-list" class="list"></ul>
+      </section>
+
+      <!-- Profile -->
+      <section id="screen-profile" class="screen">
+        <h2 data-i18n="profileTitle">Profile</h2>
+        <p><span data-i18n="profilePhone">Phone:</span> <span id="profile-phone"></span></p>
+        <p><span data-i18n="profileRole">Role:</span> <span id="profile-role"></span></p>
+        <button id="btn-logout" class="btn danger full" data-i18n="logout">
+          Logout
+        </button>
+      </section>
+
+    </section>
+
+    <!-- Bottom nav -->
+    <nav class="bottom-nav">
+      <button data-screen="home" data-i18n="navHome">Home</button>
+      <button data-screen="history" data-i18n="navHistory">History</button>
+      <button data-screen="profile" data-i18n="navProfile">Profile</button>
+    </nav>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
